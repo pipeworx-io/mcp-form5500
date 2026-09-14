@@ -1,0 +1,27 @@
+{
+  "name": "@pipeworx/mcp-form5500",
+  "version": "0.1.0",
+  "description": "Form 5500 MCP — wraps the U.S. DOL/EBSA EFAST2 Form 5500 Search service",
+  "type": "module",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "bin": {
+    "mcp-form5500": "bin/cli.js"
+  },
+  "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "form5500"],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pipeworx-io/mcp-form5500.git"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "tsx": "^4.19.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0"
+  }
+}
