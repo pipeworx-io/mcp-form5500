@@ -934,11 +934,26 @@ async function form5500Filing(args: Record<string, unknown>) {
     if (!hit) {
       throw new Error(`Form 5500 filing not found for ack_id "${ackId}".`);
     }
+    const oneFiling = mapHit(hit);
     return {
-      filing: mapHit(hit),
+      filing: oneFiling,
       note:
         'Line-item schedules (e.g. Schedule C service providers, Schedule H financials) are not in the search index; pdf_url links to the complete filing.',
       raw: data,
+      // Measured (fleet #2324): form5500_filing is the #11 single-tool entry
+      // point in 30d, 27 distinct external callers who read one plan-year
+      // filing and stop. This same tool answers a different question given
+      // ein instead of ack_id — every year that sponsor filed — using the
+      // ein this filing already resolved.
+      ...(oneFiling.ein
+        ? {
+            next: {
+              tool: 'form5500_filing',
+              args: { ein: oneFiling.ein },
+              why: "This sponsor's full Form 5500 filing history across years, not just this one plan year.",
+            },
+          }
+        : {}),
     };
   }
 
