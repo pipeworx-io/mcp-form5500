@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-form5500",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Form 5500 MCP — wraps the U.S. DOL/EBSA EFAST2 Form 5500 Search service",
   "type": "module",
   "main": "src/index.ts",
@@ -26,7 +26,7 @@
     "@cloudflare/workers-types": "^4.20260405.1"
   },
   "pipeworx": {
-    "sourceHash": "v1-56217774529bb791cf0bda0b5837ce4fae394b91a2f2d51a368560bb9e87921b",
-    "sourceCommit": "76aa8f5d9b5dc2f665563030647c68e661478864"
+    "sourceHash": "v1-9ef6953ffcf9841c3e86026a3715ec633ade573f23ca96ef7a1a0e2109bfd967",
+    "sourceCommit": "91681e9a4a137fa0051d58e32f38c64b6334af5c"
   }
 }
