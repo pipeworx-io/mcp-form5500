@@ -980,6 +980,12 @@ async function form5500Filing(args: Record<string, unknown>) {
       // filing and stop. This same tool answers a different question given
       // ein instead of ack_id — every year that sponsor filed — using the
       // ein this filing already resolved.
+      //
+      // 14d re-measure (fleet #2325, 2026-10-07, same methodology as above
+      // — re-derivation of the baseline landed within 1 of 27/45, confirming
+      // the method): single-tool-only callers 28 -> 19 (total callers 45 ->
+      // 40), share 62.2% -> 47.5%, DOWN 14.7pt. Directional, not a verdict —
+      // full comparison in the fleet #2325 close.
       ...(oneFiling.ein
         ? {
             next: {
