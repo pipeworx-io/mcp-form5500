@@ -1,12 +1,20 @@
 {
   "name": "@pipeworx/mcp-form5500",
-  "version": "0.1.5",
+  "version": "0.2.0",
   "description": "Form 5500 MCP — wraps the U.S. DOL/EBSA EFAST2 Form 5500 Search service (the live JSON backend behind efast.dol.gov/5500Search, an AWS CloudSearch index of ~14.3M employee-benefit / pension plan filings). Keyless, no auth.",
   "type": "module",
-  "main": "src/index.ts",
-  "types": "src/index.ts",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./tools.json": "./tools.json",
+    "./package.json": "./package.json"
+  },
   "bin": {
     "mcp-form5500": "bin/cli.js"
+  },
+  "files": ["bin/", "lib/", "tools.json", "server.json"],
+  "engines": {
+    "node": ">=18"
   },
   "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "form5500"],
   "license": "MIT",
@@ -14,19 +22,12 @@
     "type": "git",
     "url": "git+https://github.com/pipeworx-io/mcp-form5500.git"
   },
-  "scripts": {
-    "typecheck": "tsc --noEmit"
-  },
-  "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.30.0",
-    "tsx": "^4.19.0"
-  },
-  "devDependencies": {
-    "typescript": "^5.9.3",
-    "@cloudflare/workers-types": "^4.20260405.1"
-  },
+  "mcpName": "io.github.pipeworx-io/form5500",
   "pipeworx": {
-    "sourceHash": "v1-33076d3218c31cbc18e409be5635ab6bd0548bfdef5eb2cc017081e4a5906b4d",
-    "sourceCommit": "445bacc5596a845c12d6945fbfcdf330ef60dcc4"
+    "mode": "gateway",
+    "slug": "form5500",
+    "gatewaySlug": "form5500",
+    "sourceHash": "v1-16e278c244d7e965cda153697fa9d9ddbeaab7748ba2616d841fe980a279920f",
+    "sourceCommit": "bb047243cf27f32453103de186b8e6a8b6a1ce79"
   }
 }
