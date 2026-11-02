@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-form5500",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Form 5500 MCP — wraps the U.S. DOL/EBSA EFAST2 Form 5500 Search service (the live JSON backend behind efast.dol.gov/5500Search, an AWS CloudSearch index of ~14.3M employee-benefit / pension plan filings). Keyless, no auth.",
   "type": "module",
   "main": "lib/index.js",
@@ -27,7 +27,7 @@
     "mode": "gateway",
     "slug": "form5500",
     "gatewaySlug": "form5500",
-    "sourceHash": "v1-16e278c244d7e965cda153697fa9d9ddbeaab7748ba2616d841fe980a279920f",
-    "sourceCommit": "bb047243cf27f32453103de186b8e6a8b6a1ce79"
+    "sourceHash": "v1-624d9ea912ab441ac33d32a7516ee5395b747b155913b980eefa6097d02598d4",
+    "sourceCommit": "030233f6b150a38a44421f88a5fcbad123f0fea8"
   }
 }
